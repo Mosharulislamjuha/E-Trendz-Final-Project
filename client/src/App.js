@@ -103,7 +103,7 @@ function App() {
                         <ProtectedRoute path="/payment" component={Payment} />
                     </Elements>
                 )}
-                <ProtectedRoute path="/success" component={Success} />
+                <ProtectedRoute path="/success/:id" component={Success} />
                 <ProtectedRoute
                     path="/admin"
                     isAdmin={true}

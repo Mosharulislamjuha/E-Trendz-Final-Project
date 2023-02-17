@@ -285,11 +285,11 @@ exports.deleteUser = catchAsyncErrors(async (req, res, next) => {
 exports.sendCode = catchAsyncErrors(async (req,res) => {
   const {email} = req.body;
   let transport = nodemailer.createTransport({
-    host: "sandbox.smtp.mailtrap.io",
-  port: 2525,
+    service: "gmail",
+
   auth: {
-    user: "ae37de832ea7cf",
-    pass: "d9e40db4ad71fe"
+    user: "etrendz2023@gmail.com",
+    pass: "hhietcrfqjovrbyf"
   }
 
   });

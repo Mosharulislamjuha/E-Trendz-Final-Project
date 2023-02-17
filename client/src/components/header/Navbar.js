@@ -26,12 +26,12 @@ const Navbar = () => {
     const { cartItems } = useSelector((state) => state.cart);
 
     // Sticky Menu Area
-    useEffect(() => {
-        window.addEventListener("scroll", isSticky);
-        return () => {
-            window.removeEventListener("scroll", isSticky);
-        };
-    });
+    // useEffect(() => {
+    //     window.addEventListener("scroll", isSticky);
+    //     return () => {
+    //         window.removeEventListener("scroll", isSticky);
+    //     };
+    // });
 
     /* Method that will fix header after a specific scrollable */
     const isSticky = (e) => {

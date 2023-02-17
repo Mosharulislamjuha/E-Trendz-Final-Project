@@ -65,7 +65,7 @@ const Login = ({ history, location }) => {
             </div>
             <div className={styles.from_group}>
               {email.length > 1 &&
-                <button onClick={(e) => submitHandler(e)} type="submit"><a href="/">Login </a></button>
+                <a href={"/"}><button onClick={(e) => submitHandler(e)} type="submit">Login</button></a>
              }
             </div>
           </form>
