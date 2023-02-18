@@ -57,7 +57,7 @@ const [codeFromServer,setCodeFromServer] = useState("")
   const handleCheckCode = async (e)=>{
     e.preventDefault();
     console.log(code,"code")
-    if(code == codeFromServer){
+    if(parseInt(code) === parseInt(codeFromServer)){
       console.log("enter")
       const formData = new FormData();
       formData.set("name", name);
@@ -68,7 +68,7 @@ const [codeFromServer,setCodeFromServer] = useState("")
 
       // navigate.push("/");
     }else{
-      alert("Invalid code")
+      return alert("error try again")
     }
   }
 

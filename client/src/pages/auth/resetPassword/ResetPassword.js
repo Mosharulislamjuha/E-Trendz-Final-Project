@@ -9,6 +9,7 @@ import MetaData from "../../../components/MetaData";
 import styles from "./ResetPassword.module.scss";
 
 const ResetPassword = ({ history, match }) => {
+    const [email, setEmail] = useState("")
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -33,6 +34,7 @@ const ResetPassword = ({ history, match }) => {
         e.preventDefault();
 
         const formData = new FormData();
+        formData.set("email", email);
         formData.set("password", password);
         formData.set("confirmPassword", confirmPassword);
 
@@ -48,6 +50,18 @@ const ResetPassword = ({ history, match }) => {
                         <form className="shadow-lg" onSubmit={submitHandler}>
                             <h1 className="mb-3">New Password</h1>
 
+                            <div className="form-group">
+                                <label htmlFor="email">Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    className="form-control"
+                                    value={email}
+                                    onChange={(e) =>
+                                        setEmail(e.target.value)
+                                    }
+                                />
+                            </div>
                             <div className="form-group">
                                 <label htmlFor="password_field">Password</label>
                                 <input
