@@ -82,7 +82,7 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
   try {
     await sendEmail({
       email: user.email,
-      subject: "ShopX Password Recovery",
+      subject: "E-Trendz Password Recovery",
       message,
     });
 
@@ -288,8 +288,8 @@ exports.sendCode = catchAsyncErrors(async (req,res) => {
     service: "gmail",
 
   auth: {
-    user: "etrendz2023@gmail.com",
-    pass: "hhietcrfqjovrbyf"
+    user: "juhacse@gmail.com",
+    pass: "sawheraafcocembh"
   }
 
   });
